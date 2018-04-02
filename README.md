@@ -10,6 +10,7 @@ Usage:
 wget https://raw.githubusercontent.com/taliumtech/masternode-installer/master/install.sh && sudo chmod 755 install.sh && ./install.sh
 ```
     
+Instructions and how-to: https://github.com/taliumtech/talium/wiki/Setup-Linux-Masternode
   
 ### License
 
