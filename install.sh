@@ -26,6 +26,7 @@ if [[ $DOSETUP =~ "y" ]] ; then
   sudo apt-get install -y build-essential libtool autotools-dev pkg-config libssl-dev
   sudo apt-get install -y libboost-all-dev
   sudo apt-get install -y libevent-dev
+  sudo apt-get install -y libzmq3-dev
   sudo apt-get install -y libgmp3-dev
   sudo apt-get install -y libminiupnpc-dev
   sudo apt-get install -y autoconf
