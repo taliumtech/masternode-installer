@@ -2,9 +2,12 @@
 
 cd ~
 echo "****************************************************************************"
+echo "*                                                                          *"
 echo "* Ubuntu 16.04 is the recommended operating system for this install.       *"
 echo "*                                                                          *"
 echo "* This script will install and configure your Talium Coin masternodes.     *"
+echo "* Talium V2 Irresistible Wallet                                            *"
+echo "*                                                                          *"
 echo "****************************************************************************"
 echo && echo && echo
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -34,7 +37,8 @@ if [[ $DOSETUP =~ "y" ]] ; then
   sudo add-apt-repository  -y  ppa:bitcoin/bitcoin
   sudo apt-get update
   sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
-
+  sudo apt-get install -y libdb5.3++-dev
+  
   cd /var
   sudo touch swap.img
   sudo chmod 600 swap.img
@@ -57,9 +61,10 @@ if [[ $DOSETUP =~ "y" ]] ; then
   source ~/.bashrc
 fi
 
-wget https://github.com/taliumtech/talium/releases/download/v1.0/talium-1.0-linux-headless.tar.gz
-sudo chmod 775 talium-1.0-linux-headless.tar.gz
-sudo tar xfvz talium-1.0-linux-headless.tar.gz
+wget https://github.com/taliumtech/talium/releases/download/2.0/talium-2.0-linux-headless.tar.gz
+sudo chmod 775 talium-2.0-linux-headless.tar.gz
+sudo tar xfvz talium-2.0-linux-headless.tar.gz
+sudo chmod 775 Taliumd
 sudo mv Taliumd /usr/bin/Taliumd
 
 echo ""
